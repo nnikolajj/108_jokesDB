@@ -30,10 +30,8 @@ public class JokesService {
 		RemoteJokesService rjs= new RemoteJokesService();
 
 		for (int i=0; i<50; i++){
-			JokesEntity joke = rjs.jotd();
-			joke.setTimestamp(LocalDate.now());
 			jokes.add(rjs.jotd());
-
+			jokes.get(i).setTimestamp(LocalDate.now());
 		}
 
 		jokesRepository.saveAll(jokes);
