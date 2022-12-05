@@ -1,18 +1,11 @@
-# JokesDB
+Selbsteinschätzung:
+4.5 -> so gut wie alle min. Requirements eingehalten
 
-A minimal application to play with JPA and spring data topics.
 
-## 🐳 Postgres with Docker
+----
 
-A simple solution expects a https://www.baeldung.com/linux/docker-run-without-sudo[running docker without sudo].
-To get a Database connection (and associated JPA-autocomplete), run `./gradlew bootRun` (it will hang).
+Ich habe mir Mühe gegeben, alle min Requirements umzusetzen, und bei zb dem Rating, was nicht funktioniert wenn man irgendwo ein rating machen kann habe ich trotzdem statisch eingefügt.
 
-Alternatively launch a postgres docker container similar to the `dockerPostgres`-Task in `build.gradle` by hand.
+Die Anzahl Jokes kann man auch ganz einfache erhöhen
 
-## 🪣 IntelliJ Database View
-
-View | Tool Windows | Database | + | Data Source from URL
-```
-jdbc:postgresql://localhost:5432/localdb
-User: localuser, Password: localpass
-```
+Was ich nicht geschafft habe ist, dass duplicates vrhindert werden, aber im Internet habe ich nicht wirklich nützliches gefunden, was es einfach gemacht hätte

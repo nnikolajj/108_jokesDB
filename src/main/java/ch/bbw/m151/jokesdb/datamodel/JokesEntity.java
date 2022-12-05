@@ -1,32 +1,25 @@
 package ch.bbw.m151.jokesdb.datamodel;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.*;
+import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "jokes")
+@Getter
+@Setter
 public class JokesEntity {
 
 	@Id
 	@GeneratedValue
 	int id;
 
-	@Column(nullable = false)
+	@Column(nullable = true, length = 500)
 	String joke;
-
-	public JokesEntity setJoke(String joke) {
-		this.joke = joke;
-		return this;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public String getJoke() {
-		return joke;
-	}
+	LocalDate timestamp;
+	LocalDate modifiedTimestamp;
+	String category;
 }

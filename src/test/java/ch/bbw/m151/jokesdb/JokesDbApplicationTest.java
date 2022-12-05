@@ -39,4 +39,7 @@ public class JokesDbApplicationTest implements WithAssertions {
 				.expectBodyList(JokesEntity.class)
 				.hasSize(pageSize);
 	}
+
+	@Test
+	void
 }
